@@ -1,13 +1,13 @@
 import sys
 import os
-#path "C:\ProgramData\Anaconda3\Lib\site-packages\fuzzywuzzy"
+
 #pip install fuzzywuzzy
 #pip install fuzzywuzzy[speedup]
 #pip install python-Levenshtein
 
 import importlib
 
-pyfilepath='C:\\ProgramData\\Anaconda3\\Lib\\site-packages\\fuzzywuzzy'
+pyfilepath='your module path'
 dirname, basename = os.path.split(pyfilepath) # pyfilepath: /my/path/mymodule.py
 sys.path.append(dirname) # only directories should be added to PYTHONPATH
 module_name = os.path.splitext(basename)[0] # /my/path/mymodule.py --> mymodule
