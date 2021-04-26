@@ -1,9 +1,10 @@
 # PythonScriptComparison_with_Uipath
- Install the following libraries with pip command:
+ Install the following libraries with pip command in your terminal:
 pip install fuzzywuzzy
 pip install fuzzywuzzy[speedup]
 pip install python-Levenshtein
 
+Install the Python package in Uipath.
 Due to a Uipath limitation, Python activity uses, by default, the installation location of the Python activities pack as the run directory for the script. To change this, and to be able to use relative paths inside the script, you can add the following code to the loaded script as a workaround:
 
 import sys 
@@ -22,3 +23,4 @@ module_name = os.path.splitext(basename)[0] # /my/path/mymodule.py --> mymodule
 module = importlib.import_module(module_name)
 
 print(module) #if you print the module in this case it will be fuzzywuzzy
+
